@@ -17,4 +17,5 @@ public class Contants {
     public static final By quantity2 = By.cssSelector("option[value='2']");
     public static final By removeCartItem = By.cssSelector("button[id='removeCartItemBtn0-key-0']");
     public static final By emptyCart = By.xpath("//*[@id='emtyCart']/div[2]/strong");
+    public static final By productDescription = By.cssSelector("span[class='o-productDetail__description']");
 }

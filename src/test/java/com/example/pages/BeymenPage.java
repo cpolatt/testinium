@@ -2,7 +2,6 @@ package com.example.pages;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-
 import com.example.base.BasePage;
 
 import static com.example.constants.Contants.*;
@@ -18,13 +17,14 @@ public class BeymenPage extends BasePage {
         return this;
     }
 
-    public BeymenPage setTextInSearchBox() {
-        sendKeys(input_search, "şort");
+    public BeymenPage setTextInSearchBox(String text) {
+
+        sendKeys(input_search, text);
         return this;
     }
 
-    public BeymenPage setTextInSearchBox2() {
-        findElement(input_search).sendKeys("gömlek", Keys.RETURN);
+    public BeymenPage setTextInSearchBox2(String text) {
+        findElement(input_search).sendKeys(text, Keys.RETURN);
         return this;
     }
 
@@ -43,54 +43,58 @@ public class BeymenPage extends BasePage {
         return this;
     }
 
-    public BeymenPage clickProduct(){
+    public BeymenPage clickProduct() {
         findElement(product).click();
         return this;
     }
 
-    public BeymenPage clickAddBasket(){
+    public BeymenPage clickAddBasket() {
         findElement(addBasket).click();
         return this;
     }
 
-    public BeymenPage selectSize(){
+    public BeymenPage selectSize() {
         findElement(size).click();
         return this;
     }
 
-    public String getProductPrice(){
+    public String getProductPrice() {
         return findElement(productPrice).getText();
     }
 
-    public BeymenPage clickCart(){
+    public String getProductDescription() {
+        return findElement(productDescription).getText();
+    }
+
+    public BeymenPage clickCart() {
         findElement(cart).click();
         return this;
     }
 
-    public String getCartPrice(){
+    public String getCartPrice() {
         return findElement(cartPrice).getText();
     }
 
-    public BeymenPage clickQantity(){
+    public BeymenPage clickQantity() {
         findElement(quantity).click();
         return this;
     }
 
-    public BeymenPage selectQantity(){
+    public BeymenPage selectQantity() {
         findElement(quantity2).click();
         return this;
     }
 
-    public String getQantity(){
+    public String getQantity() {
         return findElement(quantity).getText();
     }
 
-    public BeymenPage removeCartItem(){
+    public BeymenPage removeCartItem() {
         findElement(removeCartItem).click();
         return this;
     }
 
-    public String emptyCart(){
+    public String emptyCart() {
         return findElement(emptyCart).getText();
     }
 
